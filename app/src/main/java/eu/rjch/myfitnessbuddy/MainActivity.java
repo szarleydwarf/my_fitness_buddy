@@ -1,17 +1,17 @@
 package eu.rjch.myfitnessbuddy;
 
+import android.app.Activity;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.VideoView;
 
 import com.crashlytics.android.Crashlytics;
 
 import eu.rjch.myfitnessbuddy.utility.Utilities;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
