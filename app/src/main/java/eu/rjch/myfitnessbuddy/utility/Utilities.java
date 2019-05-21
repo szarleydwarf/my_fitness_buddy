@@ -32,8 +32,9 @@ public class Utilities {
         alertDialog.show();
     }
 
-    public void showToast(View v, String msg) {
-        LayoutInflater lf = (LayoutInflater)v.getContext().getSystemService( Context.LAYOUT_INFLATER_SERVICE );
+    public void showToast(Context v, String msg) {
+
+        LayoutInflater lf = (LayoutInflater)v.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
         View ctv = lf.inflate(R.layout.toaster, null);
         ((TextView) ctv.findViewById(R.id.msg)).setText(msg);
         Toast t = Toast.makeText(ctv.getContext(), "", Toast.LENGTH_LONG);

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:background="@drawable/gradient_box"
+        android:layout_marginTop="@dimen/marginT"
+    >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/common_google_signin_btn_icon_dark_focused"
+            android:paddingRight="@dimen/marginT"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signin"
+            android:textSize="@dimen/big_text"
+            android:textColor="@color/l_grey"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/marginT"
+        android:gravity="center_horizontal"
+    >
+        <Button
+            android:id="@+id/eula_btn"
+            android:text="@string/eulabtn"
+            android:textSize="@dimen/normal_text"
+            android:textColor="@color/white"
+            android:background="@drawable/border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        />
+    </LinearLayout>
+
+</LinearLayout>
