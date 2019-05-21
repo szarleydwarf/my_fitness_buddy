@@ -3,27 +3,49 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     >
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:orientation="vertical"
         >
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="@dimen/normal_text"
-            android:text="@string/eula"
+            android:background="@color/white"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue"
+                android:textSize="@dimen/big_text"
+                android:text="@string/eulabtn"
+                android:textColor="@color/black"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/normal_text"
+                android:text="@string/eula"
         />
-    <Button
-        android:id="@+id/back_btn"
-        android:text="@string/back_btn"
-        android:background="@color/l_green"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-    />
+            <Button
+                android:id="@+id/back_btn"
+                android:text="@string/back_btn"
+                android:background="@color/l_green"
+                android:textSize="@dimen/big_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/marginT"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </LinearLayout>
     </LinearLayout>
-
 </ScrollView>
