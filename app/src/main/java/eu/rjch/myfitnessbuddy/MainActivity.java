@@ -12,12 +12,14 @@ import com.crashlytics.android.Crashlytics;
 
 import eu.rjch.myfitnessbuddy.activities.SignIn;
 import eu.rjch.myfitnessbuddy.utility.Utilities;
+import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
         Crashlytics.log(1, "MainApp", "Something went wrong on start MainApp");
 

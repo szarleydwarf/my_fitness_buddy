@@ -3,4 +3,6 @@
     <dimen name="big_text">24sp</dimen>
     <dimen name="normal_text">18sp</dimen>
     <dimen name="marginT">5dp</dimen>
+    <dimen name="small_text">14sp</dimen>
+    <dimen name="big_margin">150dp</dimen>
 </resources>

@@ -6,6 +6,35 @@
     android:orientation="vertical"
     android:background="@drawable/background"
     >
+
+    <!--google_layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:background="@drawable/gradient_box"
+        android:layout_marginTop="@dimen/big_margin"
+    >
+        <ImageButton
+            android:id="@+id/g_sign_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/google"
+            android:paddingRight="@dimen/marginT"
+            android:contentDescription="@string/google" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/signing"
+            android:textSize="@dimen/big_text"
+            android:textColor="@color/l_grey"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+    <!--fb_layout-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,23 +44,44 @@
         android:layout_marginTop="@dimen/marginT"
     >
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/fb_sign_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/common_google_signin_btn_icon_dark_focused"
+            android:src="@drawable/fb"
             android:paddingRight="@dimen/marginT"
-            />
+            android:contentDescription="@string/fb" />
+
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/signin"
+            android:text="@string/signinf"
             android:textSize="@dimen/big_text"
             android:textColor="@color/l_grey"
+            android:layout_gravity="center"
             />
     </LinearLayout>
 
+    <!--email_layout-->
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+    >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle"
+            android:text="OR"
+            android:textSize="@dimen/big_text"
+            android:textColor="@color/yellow"
+            android:gravity="center"
+        />
+    </LinearLayout>
+
+    <!--eula_btn_layout-->
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -41,13 +91,14 @@
         <Button
             android:id="@+id/eula_btn"
             android:text="@string/eulabtn"
-            android:textSize="@dimen/normal_text"
+            android:textSize="@dimen/small_text"
             android:textColor="@color/white"
             android:background="@drawable/border"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/marginT"
+            android:layout_alignParentBottom="true"
         />
-    </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>
