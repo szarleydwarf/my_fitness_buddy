@@ -15,6 +15,7 @@
         android:gravity="center_horizontal"
         android:background="@drawable/gradient_box"
         android:layout_marginTop="@dimen/big_margin"
+        android:clickable="true"
     >
         <ImageButton
             android:id="@+id/g_sign_btn"
@@ -42,6 +43,7 @@
         android:gravity="center_horizontal"
         android:background="@drawable/gradient_box"
         android:layout_marginTop="@dimen/marginT"
+        android:clickable="true"
     >
 
         <ImageButton
@@ -68,6 +70,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:orientation="vertical"
     >
         <TextView
             android:layout_width="wrap_content"
@@ -78,6 +81,61 @@
             android:textColor="@color/yellow"
             android:gravity="center"
         />
+        <EditText
+            android:id="@+id/email_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_transparent"
+            android:hint="Enter your email"
+            android:textSize="@dimen/big_text"
+            android:textColor="@color/blue"
+            android:layout_margin="@dimen/margin_20"
+            android:gravity="center"
+        />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+            <EditText
+                android:id="@+id/password_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_transparent"
+                android:hint="Enter your password"
+                android:textSize="@dimen/big_text"
+                android:textColor="@color/blue"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                android:singleLine="true"
+                android:gravity="center"
+                android:inputType="textPassword"
+                />
+            <ImageView
+                android:id="@+id/inside_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="5dip"
+                android:src="@drawable/hideeye"
+                android:layout_alignTop="@id/password_edittext"
+                android:layout_alignBottom="@id/password_edittext"
+                android:layout_alignRight="@id/password_edittext"
+
+                />
+
+            <ImageView
+                android:id="@+id/outside_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/inside_imageview"
+                android:layout_alignBottom="@id/inside_imageview"
+                android:layout_alignLeft="@id/inside_imageview"
+                android:layout_alignRight="@id/inside_imageview"
+                android:scaleType="fitXY"
+                android:src="@drawable/showeye"
+                android:visibility="invisible"
+                />
+        </RelativeLayout>
     </LinearLayout>
 
     <!--eula_btn_layout-->
