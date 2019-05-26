@@ -19,7 +19,6 @@ public class SignIn extends Activity {
 
     private void intit() {
         Utilities u = new Utilities();
-        View v = findViewById(R.id.VideoView);
         u.showToast(this, "Sign in please");
 
         Button eulabtn = findViewById(R.id.eula_btn);

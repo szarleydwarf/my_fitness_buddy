@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        >
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+            <ImageView
+                android:id="@+id/background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_circle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/m_p_20dp"
+                />
+            <ImageView
+                android:id="@+id/outside_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/background"
+                android:layout_alignBottom="@id/background"
+                android:layout_alignLeft="@id/background"
+                android:layout_alignRight="@id/background"
+                android:scaleType="fitXY"
+                android:src="@drawable/default_profile"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

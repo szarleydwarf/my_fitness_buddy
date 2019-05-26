@@ -14,8 +14,9 @@
         android:orientation="horizontal"
         android:gravity="center_horizontal"
         android:background="@drawable/gradient_box"
-        android:layout_marginTop="@dimen/big_margin"
+        android:layout_marginTop="@dimen/m_p_150dp"
         android:clickable="true"
+        android:focusable="true"
     >
         <ImageButton
             android:id="@+id/g_sign_btn"
@@ -23,13 +24,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/google"
-            android:paddingRight="@dimen/marginT"
+            android:paddingRight="@dimen/m_p_5dp"
             android:contentDescription="@string/google" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/signing"
-            android:textSize="@dimen/big_text"
+            android:textSize="@dimen/text_24"
             android:textColor="@color/l_grey"
             android:layout_gravity="center"
             />
@@ -42,8 +43,9 @@
         android:orientation="horizontal"
         android:gravity="center_horizontal"
         android:background="@drawable/gradient_box"
-        android:layout_marginTop="@dimen/marginT"
+        android:layout_marginTop="@dimen/m_p_5dp"
         android:clickable="true"
+        android:focusable="true"
     >
 
         <ImageButton
@@ -52,14 +54,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/fb"
-            android:paddingRight="@dimen/marginT"
+            android:paddingRight="@dimen/m_p_5dp"
             android:contentDescription="@string/fb" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/signinf"
-            android:textSize="@dimen/big_text"
+            android:textSize="@dimen/text_24"
             android:textColor="@color/l_grey"
             android:layout_gravity="center"
             />
@@ -76,22 +78,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/circle"
-            android:text="OR"
-            android:textSize="@dimen/big_text"
+            android:text="@string/or"
+            android:textSize="@dimen/text_24"
             android:textColor="@color/yellow"
             android:gravity="center"
+            android:layout_marginTop="@dimen/m_p_5dp"
         />
         <EditText
             android:id="@+id/email_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/border_transparent"
-            android:hint="Enter your email"
-            android:textSize="@dimen/big_text"
+            android:hint="@string/enter_your_email"
+            android:textSize="@dimen/text_24"
             android:textColor="@color/blue"
-            android:layout_margin="@dimen/margin_20"
+            android:layout_margin="@dimen/m_p_20dp"
             android:gravity="center"
+            android:autofillHints="@string/enter_your_email"
+            android:inputType="textEmailAddress"
         />
+
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -102,10 +108,10 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/border_transparent"
                 android:hint="Enter your password"
-                android:textSize="@dimen/big_text"
+                android:textSize="@dimen/text_24"
                 android:textColor="@color/blue"
-                android:layout_marginLeft="@dimen/margin_20"
-                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/m_p_20dp"
+                android:layout_marginRight="@dimen/m_p_20dp"
                 android:singleLine="true"
                 android:gravity="center"
                 android:inputType="textPassword"
@@ -143,18 +149,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="@dimen/marginT"
+        android:layout_marginTop="@dimen/m_p_5dp"
         android:gravity="center_horizontal"
     >
         <Button
             android:id="@+id/eula_btn"
             android:text="@string/eulabtn"
-            android:textSize="@dimen/small_text"
+            android:textSize="@dimen/text_14"
             android:textColor="@color/white"
             android:background="@drawable/border"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/marginT"
+            android:padding="@dimen/m_p_5dp"
             android:layout_alignParentBottom="true"
         />
     </RelativeLayout>

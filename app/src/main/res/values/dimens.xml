@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="big_text">24sp</dimen>
-    <dimen name="normal_text">18sp</dimen>
-    <dimen name="marginT">5dp</dimen>
-    <dimen name="small_text">14sp</dimen>
-    <dimen name="big_margin">150dp</dimen>
-    <dimen name="margin_20">20dp</dimen>
+    <dimen name="text_24">24sp</dimen>
+    <dimen name="text_18">18sp</dimen>
+    <dimen name="text_14">14sp</dimen>
+
+    <dimen name="m_p_5dp">5dp</dimen>
+    <dimen name="m_p_20dp">20dp</dimen>
+    <dimen name="m_p_150dp">150dp</dimen>
+
+    <dimen name="circle_R_200">200dp</dimen>
+
+    <dimen name="stroke_2dp">2dp</dimen>
 </resources>

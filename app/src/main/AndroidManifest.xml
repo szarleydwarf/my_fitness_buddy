@@ -32,6 +32,7 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
         </activity>
+        <activity android:name=".activities.MyProfileAct" />
 
         <meta-data
             android:name="io.fabric.ApiKey"

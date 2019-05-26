@@ -16,4 +16,6 @@
     <color name="yellow">#FFF000</color>
 
     <color name="blue_50">#9996E6EE</color>
+    <color name="dark_navy">#2A3A97</color>
+    <color name="l_blue_transparent">#9978C7FF</color>
 </resources>

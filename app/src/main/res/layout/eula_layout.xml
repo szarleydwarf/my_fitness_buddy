@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/blue"
-            android:textSize="@dimen/normal_text"
+            android:textSize="@dimen/text_18"
             android:text="@string/eulabtn"
             android:textColor="@color/black"
         />
@@ -29,7 +29,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/normal_text"
+                    android:textSize="@dimen/text_18"
                     android:text="@string/eula"
                 />
             </ScrollView>
@@ -44,8 +44,8 @@
             android:id="@+id/back_btn"
             android:text="@string/back_btn"
             android:background="@drawable/border_transparent"
-            android:padding="@dimen/marginT"
-            android:textSize="@dimen/big_text"
+            android:padding="@dimen/m_p_5dp"
+            android:textSize="@dimen/text_24"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
