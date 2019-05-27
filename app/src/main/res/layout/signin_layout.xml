@@ -1,168 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/background"
     >
-
-    <!--google_layout-->
     <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_horizontal"
-        android:background="@drawable/gradient_box"
-        android:layout_marginTop="@dimen/m_p_150dp"
-        android:clickable="true"
-        android:focusable="true"
-    >
-        <ImageButton
-            android:id="@+id/g_sign_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/google"
-            android:paddingRight="@dimen/m_p_5dp"
-            android:contentDescription="@string/google" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/signing"
-            android:textSize="@dimen/text_24"
-            android:textColor="@color/l_grey"
-            android:layout_gravity="center"
-            />
-    </LinearLayout>
-
-    <!--fb_layout-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_horizontal"
-        android:background="@drawable/gradient_box"
-        android:layout_marginTop="@dimen/m_p_5dp"
-        android:clickable="true"
-        android:focusable="true"
-    >
-
-        <ImageButton
-            android:id="@+id/fb_sign_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/fb"
-            android:paddingRight="@dimen/m_p_5dp"
-            android:contentDescription="@string/fb" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/signinf"
-            android:textSize="@dimen/text_24"
-            android:textColor="@color/l_grey"
-            android:layout_gravity="center"
-            />
-    </LinearLayout>
-
-    <!--email_layout-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-    >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/circle"
-            android:text="@string/or"
-            android:textSize="@dimen/text_24"
-            android:textColor="@color/yellow"
-            android:gravity="center"
-            android:layout_marginTop="@dimen/m_p_5dp"
-        />
-        <EditText
-            android:id="@+id/email_edittext"
+        android:background="@drawable/background"
+        >
+
+        <!--google_layout-->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/border_transparent"
-            android:hint="@string/enter_your_email"
-            android:textSize="@dimen/text_24"
-            android:textColor="@color/blue"
-            android:layout_margin="@dimen/m_p_20dp"
-            android:gravity="center"
-            android:autofillHints="@string/enter_your_email"
-            android:inputType="textEmailAddress"
-        />
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:background="@drawable/gradient_box"
+            android:layout_marginTop="@dimen/m_p_150dp"
+            android:clickable="true"
+            android:focusable="true"
+        >
+            <ImageButton
+                android:id="@+id/g_sign_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/google"
+                android:paddingRight="@dimen/m_p_5dp"
+                android:contentDescription="@string/google" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/signing"
+                android:textSize="@dimen/text_24"
+                android:textColor="@color/l_grey"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
 
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            >
+        <!--fb_layout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:background="@drawable/gradient_box"
+            android:layout_marginTop="@dimen/m_p_5dp"
+            android:clickable="true"
+            android:focusable="true"
+        >
+
+            <ImageButton
+                android:id="@+id/fb_sign_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/fb"
+                android:paddingRight="@dimen/m_p_5dp"
+                android:contentDescription="@string/fb" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/signinf"
+                android:textSize="@dimen/text_24"
+                android:textColor="@color/l_grey"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+        <!--email_layout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+        >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle"
+                android:text="@string/or"
+                android:textSize="@dimen/text_24"
+                android:textColor="@color/yellow"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/m_p_5dp"
+            />
             <EditText
-                android:id="@+id/password_edittext"
+                android:id="@+id/email_edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/border_transparent"
-                android:hint="Enter your password"
+                android:hint="@string/enter_your_email"
                 android:textSize="@dimen/text_24"
                 android:textColor="@color/blue"
-                android:layout_marginLeft="@dimen/m_p_20dp"
-                android:layout_marginRight="@dimen/m_p_20dp"
-                android:singleLine="true"
+                android:layout_margin="@dimen/m_p_20dp"
                 android:gravity="center"
-                android:inputType="textPassword"
-                />
-            <ImageView
-                android:id="@+id/inside_imageview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dip"
-                android:layout_marginTop="5dip"
-                android:src="@drawable/hideeye"
-                android:layout_alignTop="@id/password_edittext"
-                android:layout_alignBottom="@id/password_edittext"
-                android:layout_alignRight="@id/password_edittext"
+                android:autofillHints="@string/enter_your_email"
+                android:inputType="textEmailAddress"
+            />
 
-                />
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                >
+                <EditText
+                    android:id="@+id/password_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_transparent"
+                    android:hint="Enter your password"
+                    android:textSize="@dimen/text_24"
+                    android:textColor="@color/blue"
+                    android:layout_marginLeft="@dimen/m_p_20dp"
+                    android:layout_marginRight="@dimen/m_p_20dp"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:inputType="textPassword"
+                    />
+                <ImageView
+                    android:id="@+id/inside_imageview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginTop="5dip"
+                    android:src="@drawable/hideeye"
+                    android:layout_alignTop="@id/password_edittext"
+                    android:layout_alignBottom="@id/password_edittext"
+                    android:layout_alignRight="@id/password_edittext"
 
-            <ImageView
-                android:id="@+id/outside_imageview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@id/inside_imageview"
-                android:layout_alignBottom="@id/inside_imageview"
-                android:layout_alignLeft="@id/inside_imageview"
-                android:layout_alignRight="@id/inside_imageview"
-                android:scaleType="fitXY"
-                android:src="@drawable/showeye"
-                android:visibility="invisible"
-                />
-        </RelativeLayout>
-    </LinearLayout>
+                    />
 
-    <!--eula_btn_layout-->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="@dimen/m_p_5dp"
-        android:gravity="center_horizontal"
-    >
-        <Button
-            android:id="@+id/eula_btn"
-            android:text="@string/eulabtn"
-            android:textSize="@dimen/text_14"
-            android:textColor="@color/white"
-            android:background="@drawable/border"
-            android:layout_width="wrap_content"
+                <ImageView
+                    android:id="@+id/outside_imageview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/inside_imageview"
+                    android:layout_alignBottom="@id/inside_imageview"
+                    android:layout_alignLeft="@id/inside_imageview"
+                    android:layout_alignRight="@id/inside_imageview"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/showeye"
+                    android:visibility="invisible"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--eula_btn_layout-->
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/m_p_5dp"
-            android:layout_alignParentBottom="true"
-        />
-    </RelativeLayout>
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/m_p_5dp"
+            android:gravity="center_horizontal"
+        >
+            <Button
+                android:id="@+id/eula_btn"
+                android:text="@string/eulabtn"
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/white"
+                android:background="@drawable/border"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/m_p_5dp"
+                android:layout_alignParentBottom="true"
+            />
+        </RelativeLayout>
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<selector xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+<!--</selector>-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line" >
+    <!-- View border color and width -->
+    <stroke
+        android:width="@dimen/m_p_5dp"
+        android:color="@color/blue"
+        android:padding="@dimen/m_p_5dp"
+        >
+    </stroke>
+</shape>

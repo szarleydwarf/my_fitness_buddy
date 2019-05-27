@@ -35,7 +35,42 @@
                 android:src="@drawable/default_profile"
                 />
         </RelativeLayout>
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/m_p_5dp"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hline"
+                android:layout_margin="@dimen/m_p_20dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/m_p_5dp"
+                android:layout_margin="@dimen/m_p_5dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/user_nick"
+                    android:text="@string/default_user_nick"
+                    android:layout_weight="1"
+                />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nick_name_edit"
+                    android:text="@string/edit"
+                    android:background="@drawable/border"
+                    android:layout_weight="1"
+                />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
 

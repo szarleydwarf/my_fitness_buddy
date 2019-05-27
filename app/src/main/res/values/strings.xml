@@ -10,6 +10,7 @@
 	<string name="fb">Facebook</string>
 	<string name="or">OR</string>
 	<string name="enter_your_email">Enter your email</string>
+	<string name="default_user_nick">NoName</string>
 
 <string name="eula">
 	<p>This End-User License Agreement ("EULA") is a legal agreement between you and <b>Non Profit</b></p>
@@ -38,5 +39,6 @@
 	<h3>Governing Law</h3>
     <p>This EULA agreement, and any dispute arising out of or in connection with this EULA agreement, shall be governed by and construed in accordance with the laws of <b>Ireland</b>.</p>
 </string>
+    <string name="edit">EDIT</string>
 
 </resources>
