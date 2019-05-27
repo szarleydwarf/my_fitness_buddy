@@ -3,13 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
+
     >
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/background"
         >
 
         <!--google_layout-->
@@ -19,7 +19,7 @@
             android:orientation="horizontal"
             android:gravity="center_horizontal"
             android:background="@drawable/gradient_box"
-            android:layout_marginTop="@dimen/m_p_150dp"
+            android:layout_marginTop="@dimen/m_p_20dp"
             android:clickable="true"
             android:focusable="true"
         >
@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/signing"
-                android:textSize="@dimen/text_24"
+                android:textSize="@dimen/text_14"
                 android:textColor="@color/l_grey"
                 android:layout_gravity="center"
                 />
@@ -66,7 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/signinf"
-                android:textSize="@dimen/text_24"
+                android:textSize="@dimen/text_14"
                 android:textColor="@color/l_grey"
                 android:layout_gravity="center"
                 />
@@ -96,7 +96,7 @@
                 android:background="@drawable/border_transparent"
                 android:hint="@string/enter_your_email"
                 android:textSize="@dimen/text_24"
-                android:textColor="@color/blue"
+                android:textColor="@color/white"
                 android:layout_margin="@dimen/m_p_20dp"
                 android:gravity="center"
                 android:autofillHints="@string/enter_your_email"
@@ -112,9 +112,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/border_transparent"
-                    android:hint="Enter your password"
+                    android:hint="@string/enter_your_password"
                     android:textSize="@dimen/text_24"
-                    android:textColor="@color/blue"
+                    android:textColor="@color/white"
                     android:layout_marginLeft="@dimen/m_p_20dp"
                     android:layout_marginRight="@dimen/m_p_20dp"
                     android:singleLine="true"
@@ -133,7 +133,6 @@
                     android:layout_alignRight="@id/password_edittext"
 
                     />
-
                 <ImageView
                     android:id="@+id/outside_imageview"
                     android:layout_width="wrap_content"
@@ -149,6 +148,7 @@
             </RelativeLayout>
         </LinearLayout>
 
+
         <!--eula_btn_layout-->
         <RelativeLayout
             android:layout_width="match_parent"
@@ -156,7 +156,7 @@
             android:orientation="horizontal"
             android:layout_marginTop="@dimen/m_p_5dp"
             android:gravity="center_horizontal"
-        >
+            >
             <Button
                 android:id="@+id/eula_btn"
                 android:text="@string/eulabtn"
@@ -167,8 +167,7 @@
                 android:layout_height="wrap_content"
                 android:padding="@dimen/m_p_5dp"
                 android:layout_alignParentBottom="true"
-            />
+                />
         </RelativeLayout>
-
     </LinearLayout>
 </ScrollView>
