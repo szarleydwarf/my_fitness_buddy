@@ -11,4 +11,5 @@
     <dimen name="circle_R_200">200dp</dimen>
 
     <dimen name="stroke_2dp">2dp</dimen>
+    <dimen name="text_28">28sp</dimen>
 </resources>
