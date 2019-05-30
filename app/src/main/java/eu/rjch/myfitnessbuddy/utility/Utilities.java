@@ -62,18 +62,7 @@ public class Utilities {
         });
     }
 
-    public void iconToggle(final ImageView iv) {
-        iv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(iv.getVisibility() == View.VISIBLE){
-                    iv.setImageResource(R.drawable.showeye);
-                    Log.d("WWW", "iT  visible");
-                } else {
-                    iv.setImageResource(R.drawable.hideeye);
-                    Log.d("WWW", "iT invisible");
-                }
-            }
-        });
+    public void iconToggle(ImageView iv, int id) {
+        iv.setImageResource(id);
     }
 }
