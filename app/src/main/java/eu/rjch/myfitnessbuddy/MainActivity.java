@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
         Crashlytics.log(1, "MainApp", "Something went wrong on start MainApp");
 
         final VideoView vv = findViewById(R.id.VideoView);
-    runApp(vv);
+    runApp();
 //        try{
 //            String pkgName = getPackageName();
 //            int id = getResources().getIdentifier("intro", "raw", pkgName);
@@ -42,9 +42,7 @@ public class MainActivity extends Activity {
 //        }
     }
 
-    private void runApp(VideoView vv) {
-        Utilities u = new Utilities();
-        u.showToast(this, "yollo");
+    private void runApp() {
         Intent i = new Intent(this, SignIn.class);
         startActivity(i);
         finish();
