@@ -3,8 +3,35 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:orientation="vertical">
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="You did it !!!"
+        android:textSize="@dimen/text_28"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:layout_margin="@dimen/m_p_5dp"
+        />
+    <ImageView
+        android:layout_margin="@dimen/m_p_20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/m_p_150dp"
+        android:layout_height="@dimen/m_p_150dp"
+        />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text=""
+        />
+
+    <TextView
+        android:id="@+id/user_nick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"

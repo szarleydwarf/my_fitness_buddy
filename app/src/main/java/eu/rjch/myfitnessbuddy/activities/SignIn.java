@@ -15,12 +15,17 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.Task;
 
 import eu.rjch.myfitnessbuddy.R;
 import eu.rjch.myfitnessbuddy.utility.Utilities;
 
 public class SignIn extends Activity {
     private GoogleSignInClient mGoogleSignInClient;
+    private SignInButton gSignInBtn;
+    private Utilities u;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,50 +34,65 @@ public class SignIn extends Activity {
         init();
     }
 
-    private void init() {
-        Utilities u = new Utilities();
-
-        // Check for existing Google Sign In account,
-        // if the user is already signed in
-        // the GoogleSignInAccount will be non-null.
-        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-
-        if(account == null) {
-            Log.d("WWW", "Acc null");
-            setGoogleSignin();
+    @Override
+    public void onStart() {
+        super.onStart();
+        GoogleSignInAccount alreadyLoggedAccount = GoogleSignIn.getLastSignedInAccount(this);
+        if(alreadyLoggedAccount != null) {
+            u.showToast(this, "Already logged");
+            onLoggedIn(alreadyLoggedAccount);
         } else {
-            Log.d("WWW", "Acc fund");
-            Intent i = new Intent(this, SearchBuddy.class);
-            runApp(i);
+            u.showToast(this, "Logging you in");
         }
+    }
+
+    private void init() {
+        u = new Utilities();
+
         initiateBtns(u);
-
         passwordIconToggle(u);
+
+        googleSigning();
     }
 
-    private void runApp(Intent i) {
-//        Intent i = new Intent(this, SearchBuddy.class);
-        Log.d("WWW", "Run app");
-        startActivity(i);
-        finish();
-    }
-
-    private void setGoogleSignin() {
-        Log.d("WWW", "Signing to google");
-
+    private void googleSigning() {
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
-        // Build a GoogleSignInClient with the options specified by gso.
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-
-        findViewById(R.id.g_sign_btn).setOnClickListener(new View.OnClickListener() {
+        gSignInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = mGoogleSignInClient.getSignInIntent();
                 Log.d("WWW", "On click");
-
-                runApp(i);
+                startActivityForResult(i, 101);
             }
         });
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode,resultCode,data);
+        if(resultCode == Activity.RESULT_OK){
+            switch (requestCode){
+                case 101:
+                    try {
+                        Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+                        GoogleSignInAccount account = task.getResult(ApiException.class);
+                        Log.d("WWW", "Logging in TRY");
+                        onLoggedIn(account);
+                    } catch (ApiException e) {
+                        Log.d("WWW", "SignInResult failed code = "+e.getStatusCode());
+                    }
+                    break;
+            }
+        }
+    }
+
+    private void onLoggedIn(GoogleSignInAccount account) {
+        Log.d("WWW", "Logging in");
+        Intent i = new Intent(this, SearchBuddy.class);
+        i.putExtra(SearchBuddy.GOOGLE_ACCOUNT, account);
+        startActivity(i);
+        finish();
     }
 
     private void passwordIconToggle(final Utilities u) {
@@ -99,5 +119,7 @@ public class SignIn extends Activity {
                 finish();
             }
         });
+
+        gSignInBtn = findViewById(R.id.g_sign_btn);
     }
 }
