@@ -26,42 +26,53 @@ public class SignIn extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signin_layout);
-        intit();
+        init();
     }
 
-    private void intit() {
+    private void init() {
         Utilities u = new Utilities();
 
         // Check for existing Google Sign In account,
         // if the user is already signed in
         // the GoogleSignInAccount will be non-null.
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-//todo If GoogleSignIn.getLastSignedInAccount returns a GoogleSignInAccount
-// object (rather than null), the user has already signed in to your app
-// with Google. Update your UI accordingly—that is, hide the sign-in button,
-// launch your main activity, or whatever is appropriate for your app.
-// If GoogleSignIn.getLastSignedInAccount returns null,
-// the user has not yet signed in to your app with Google.
-// Update your UI to display the Google Sign-in button
-        if(account == null)
+
+        if(account == null) {
+            Log.d("WWW", "Acc null");
             setGoogleSignin();
-        else
-            runApp();
+        } else {
+            Log.d("WWW", "Acc fund");
+            Intent i = new Intent(this, SearchBuddy.class);
+            runApp(i);
+        }
         initiateBtns(u);
 
         passwordIconToggle(u);
     }
 
-    private void runApp() {
-        Intent i = new Intent(this, SearchBuddy.class);
+    private void runApp(Intent i) {
+//        Intent i = new Intent(this, SearchBuddy.class);
+        Log.d("WWW", "Run app");
+        startActivity(i);
+        finish();
     }
 
     private void setGoogleSignin() {
+        Log.d("WWW", "Signing to google");
+
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         // Build a GoogleSignInClient with the options specified by gso.
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
+        findViewById(R.id.g_sign_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = mGoogleSignInClient.getSignInIntent();
+                Log.d("WWW", "On click");
 
+                runApp(i);
+            }
+        });
     }
 
     private void passwordIconToggle(final Utilities u) {
