@@ -23,6 +23,7 @@ import eu.rjch.myfitnessbuddy.R;
 import eu.rjch.myfitnessbuddy.utility.Utilities;
 
 public class SignIn extends Activity {
+    private static final int RC_SIGN_IN = 1;
     private GoogleSignInClient mGoogleSignInClient;
     private SignInButton gSignInBtn;
     private Utilities u;
@@ -63,7 +64,7 @@ public class SignIn extends Activity {
             public void onClick(View view) {
                 Intent i = mGoogleSignInClient.getSignInIntent();
                 Log.d("WWW", "On click");
-                startActivityForResult(i, 101);
+                startActivityForResult(i, RC_SIGN_IN);
             }
         });
     }
@@ -71,9 +72,10 @@ public class SignIn extends Activity {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode,resultCode,data);
-        if(resultCode == Activity.RESULT_OK){
-            switch (requestCode){
-                case 101:
+        Log.d("WWW", "OnActivityResult "+resultCode+" / "+requestCode);
+        if(requestCode == RC_SIGN_IN){
+            switch (resultCode){
+                case 0:
                     try {
                         Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
                         GoogleSignInAccount account = task.getResult(ApiException.class);
