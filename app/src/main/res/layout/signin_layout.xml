@@ -22,30 +22,30 @@
             android:clickable="true"
             android:focusable="true"
             >
-            <com.google.android.gms.common.SignInButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:id="@+id/g_sign_btn"
-                >
-
-            </com.google.android.gms.common.SignInButton>
-            <!--<ImageButton-->
-                <!--android:id="@+id/g_sign_btn"-->
+            <!--<Button-->
                 <!--android:layout_width="wrap_content"-->
                 <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="center_horizontal"-->
-                <!--android:src="@drawable/google"-->
-                <!--android:paddingRight="@dimen/m_p_5dp"-->
-                <!--android:contentDescription="@string/google" />-->
-            <!--<TextView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="@string/signing"-->
-                <!--android:textSize="@dimen/text_14"-->
-                <!--android:textColor="@color/l_grey"-->
                 <!--android:layout_gravity="center"-->
-                <!--/>-->
+                <!--android:id="@+id/g_sign_btn"-->
+                <!--&gt;-->
+
+            <!--</Button>-->
+            <ImageButton
+                android:id="@+id/g_sign_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/google"
+                android:paddingRight="@dimen/m_p_5dp"
+                android:contentDescription="@string/google" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/signing"
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/l_grey"
+                android:layout_gravity="center"
+                />
         </LinearLayout>
 
         <!--fb_layout-->
@@ -142,11 +142,18 @@
                     android:layout_alignRight="@id/password_edittext"
                     android:visibility="visible"
                     />
-                <!--todo 1. put all into frame 2. try swaping images on click-->
             </RelativeLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/email_signin_btn"
+                android:text="@string/common_signin_button_text"
+                android:background="@drawable/gradient_box"
+                android:layout_margin="@dimen/m_p_5dp"
+                />
         </LinearLayout>
 
-    <!--eula_btn_layout-->
+        <!--eula_btn_layout-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -2,19 +2,19 @@
     <string name="app_name">My Fitness Buddy</string>
     <string name="ad_mob_id">ca-app-pub-1421069741839692~9245051310</string>
     <string name="ad_mob_banner">ca-app-pub-1421069741839692/5923919254</string>
-	<string name="signing">Continue with Google</string>
-	<string name="signinf">Continue with Facebook</string>
-	<string name="eulabtn">End-User License Agreement (EULA) of <i>My Fitness Buddy</i></string>
-	<string name="back_btn">Back</string>
-	<string name="google">Google</string>
-	<string name="fb">Facebook</string>
-	<string name="or">OR</string>
-	<string name="edit">EDIT</string>
-	<string name="enter_your_password">Enter your password</string>
-	<string name="enter_your_email">Enter your email</string>
-	<string name="default_user_nick">NoName</string>
+    <string name="signing">Continue with Google</string>
+    <string name="signinf">Continue with Facebook</string>
+    <string name="eulabtn">End-User License Agreement (EULA) of <i>My Fitness Buddy</i></string>
+    <string name="back_btn">Back</string>
+    <string name="google">Google</string>
+    <string name="fb">Facebook</string>
+    <string name="or">OR</string>
+    <string name="edit">EDIT</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="default_user_nick">NoName</string>
 
-<string name="eula">
+    <string name="eula">
 	<p>This End-User License Agreement ("EULA") is a legal agreement between you and <b>Non Profit</b></p>
 	<p>This EULA agreement governs your acquisition and use of our <i>My Fitness Buddy</i> software ("Software") directly from <b>Non Profit</b> or indirectly through a <b>Non Profit</b> authorized reseller or distributor (a "Reseller").</p>
 	<p>Please read this EULA agreement carefully before completing the installation process and using the <i>My Fitness Buddy</i> software. It provides a license to use the <i>My Fitness Buddy</i> software and contains warranty information and liability disclaimers.</p>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="eu.rjch.myfitnessbuddy">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -10,28 +11,31 @@
         android:roundIcon="@mipmap/ic_l"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activities.GSignIn"></activity>
+        <activity android:name=".activities.FSigniIn" />
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="@string/ad_mob_id"/>
+            android:value="@string/ad_mob_id" />
 
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait"
-                android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".activities.SignIn"
+        <activity
+            android:name=".activities.SignIn"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
-        </activity>
-        <activity android:name=".activities.Eula"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".activities.Eula"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
-        </activity>
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
         <activity android:name=".activities.MyProfileAct" />
 
         <meta-data
