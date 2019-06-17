@@ -54,6 +54,14 @@ public class SignIn extends Activity {
                 runActivity(FSigniIn.class);
             }
         });
+
+        Button emailSignBtn = findViewById(R.id.email_signin_btn);
+        emailSignBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                runActivity(EmailSignIn.class);
+            }
+        });
     }
 
     private void runActivity(Class<?> classy) {

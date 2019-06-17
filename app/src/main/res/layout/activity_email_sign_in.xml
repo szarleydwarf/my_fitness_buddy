@@ -16,7 +16,7 @@
         android:id="@+id/gsign_status_text"
         android:textSize="@dimen/text_28"
         android:textColor="@color/white"
-        android:text="Signing you into your Facebook account, please wait"
+        android:text="Signing you with your email account, please wait"
         />
     <Button
         android:layout_width="match_parent"

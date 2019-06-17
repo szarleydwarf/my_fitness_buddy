@@ -19,4 +19,13 @@
         android:text="Signiing you into your Google account, please wait"
         />
     <!--todo cancel button and some animation??-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cnacel_btn"
+        android:text="@string/cancel"
+        android:background="@drawable/b_w_box"
+        android:layout_margin="@dimen/m_p_5dp"
+        />
+
 </LinearLayout>
