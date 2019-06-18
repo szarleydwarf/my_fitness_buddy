@@ -23,13 +23,11 @@ public class SignIn extends Activity {
     }
 
     private void init(){
-        u = new Utilities();
-
-        initiateBtns(u);
+        initiateBtns();
     }
 
 
-    private void initiateBtns(Utilities u) {
+    private void initiateBtns() {
         Button eulabtn = findViewById(R.id.eula_btn);
         eulabtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +57,7 @@ public class SignIn extends Activity {
         emailSignBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //todo test if pasword and email views not empty
                 runActivity(EmailSignIn.class);
             }
         });
