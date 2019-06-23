@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">My Fitness Buddy</string>
-    <string name="ad_mob_id">ca-app-pub-1421069741839692~9245051310</string>
-    <string name="ad_mob_banner">ca-app-pub-1421069741839692/5923919254</string>
-    <string name="signing">Continue with Google</string>
+    <string name="ad_mob_id" translatable="false">ca-app-pub-1421069741839692~9245051310</string>
+    <string name="ad_mob_banner" translatable="false">ca-app-pub-1421069741839692/5923919254</string>
+	<string name="facebook_application_id" translatable="false">313771212904333</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb313771212904333</string>
+
+	<string name="signing">Continue with Google</string>
     <string name="signinf">Continue with Facebook</string>
     <string name="eulabtn">End-User License Agreement (EULA) of <i>My Fitness Buddy</i></string>
     <string name="back_btn">Back</string>
@@ -42,5 +45,7 @@
     <p>This EULA agreement, and any dispute arising out of or in connection with this EULA agreement, shall be governed by and construed in accordance with the laws of <b>Ireland</b>.</p>
 </string>
     <string name="cancel">CANCEL</string>
+    <string name="edit_password">Change Password</string>
+	<string name="signout">Sign Out</string>
 
 </resources>

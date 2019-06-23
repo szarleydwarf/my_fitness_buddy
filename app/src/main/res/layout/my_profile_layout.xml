@@ -24,7 +24,7 @@
                 android:layout_marginTop="@dimen/m_p_20dp"
                 />
             <ImageView
-                android:id="@+id/outside_imageview"
+                android:id="@+id/photo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@id/background"
@@ -47,12 +47,13 @@
                 android:background="@drawable/hline"
                 android:layout_margin="@dimen/m_p_20dp"
                 />
+            <!--user name editview-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="@dimen/m_p_5dp"
-                android:layout_margin="@dimen/m_p_5dp"
+                android:layout_margin="@dimen/m_p_20dp"
                 >
                 <TextView
                     android:layout_width="match_parent"
@@ -70,7 +71,67 @@
                     android:layout_weight="1"
                 />
             </LinearLayout>
+
+            <!--email editview-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/m_p_5dp"
+                android:layout_margin="@dimen/m_p_20dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/user_email"
+                    android:text="@string/default_user_nick"
+                    android:layout_weight="1"
+                />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/email_edit"
+                    android:text="@string/edit"
+                    android:background="@drawable/border"
+                    android:layout_weight="1"
+                />
+            </LinearLayout>
+            <!--password editview-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/m_p_5dp"
+                android:layout_margin="@dimen/m_p_20dp"
+                >
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/password_edit"
+                    android:text="@string/edit_password"
+                    android:background="@drawable/border"
+                    android:layout_weight="1"
+                />
+            </LinearLayout>
+            <!--LogOut button editview-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/m_p_5dp"
+                android:layout_margin="@dimen/m_p_20dp"
+                >
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/signout_btn"
+                    android:text="@string/signout"
+                    android:background="@drawable/border"
+                    android:layout_weight="1"
+                />
+            </LinearLayout>
         </LinearLayout>
+
     </LinearLayout>
 
 

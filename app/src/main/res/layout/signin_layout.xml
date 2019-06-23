@@ -1,176 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-
+    tools:context=".MainActivity"
     >
-    <LinearLayout
+
+    <Button
+        android:id="@+id/sign_out_btn"
+        android:text="SignOut"
+        android:layout_centerInParent="true"
+        android:enabled="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
-        <!--google_layout-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_horizontal"
-            android:background="@drawable/gradient_box"
-            android:layout_marginTop="@dimen/m_p_20dp"
-            android:clickable="true"
-            android:focusable="true"
-            >
-            <!--<Button-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:id="@+id/g_sign_btn"-->
-                <!--&gt;-->
+        />
 
-            <!--</Button>-->
-            <ImageButton
-                android:id="@+id/g_sign_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/google"
-                android:paddingRight="@dimen/m_p_5dp"
-                android:contentDescription="@string/google" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/signing"
-                android:textSize="@dimen/text_14"
-                android:textColor="@color/l_grey"
-                android:layout_gravity="center"
-                />
-        </LinearLayout>
-
-        <!--fb_layout-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_horizontal"
-            android:background="@drawable/gradient_box"
-            android:layout_marginTop="@dimen/m_p_5dp"
-            android:clickable="true"
-            android:focusable="true"
-            >
-
-            <ImageButton
-                android:id="@+id/fb_sign_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/fb"
-                android:paddingRight="@dimen/m_p_5dp"
-                android:contentDescription="@string/fb" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/signinf"
-                android:textSize="@dimen/text_14"
-                android:textColor="@color/l_grey"
-                android:layout_gravity="center"
-                />
-        </LinearLayout>
-
-        <!--email_layout-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/circle"
-                android:text="@string/or"
-                android:textSize="@dimen/text_24"
-                android:textColor="@color/yellow"
-                android:gravity="center"
-                android:layout_marginTop="@dimen/m_p_5dp"
-                />
-
-            <EditText
-                android:id="@+id/email_edittext"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/b_w_box"
-                android:hint="@string/enter_your_email"
-                android:textSize="@dimen/text_28"
-                android:textColor="@color/black"
-                android:layout_margin="@dimen/m_p_20dp"
-                android:gravity="center"
-                android:autofillHints="@string/enter_your_email"
-                android:inputType="textEmailAddress"
-                />
-
-            <!--password_layout with show/hide icon-->
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                >
-                <EditText
-                    android:id="@+id/password_edittext"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/b_w_box"
-                    android:hint="@string/enter_your_password"
-                    android:textSize="@dimen/text_24"
-                    android:textColor="@color/black"
-                    android:layout_marginLeft="@dimen/m_p_20dp"
-                    android:layout_marginRight="@dimen/m_p_20dp"
-                    android:singleLine="true"
-                    android:gravity="center"
-                    android:inputType="textPassword"
-                    />
-                <ImageView
-                    android:id="@+id/inside_imageview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dip"
-                    android:layout_marginTop="5dip"
-                    android:src="@drawable/hideeye"
-                    android:layout_alignTop="@id/password_edittext"
-                    android:layout_alignBottom="@id/password_edittext"
-                    android:layout_alignRight="@id/password_edittext"
-                    android:visibility="visible"
-                    />
-            </RelativeLayout>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/email_signin_btn"
-                android:text="@string/common_signin_button_text"
-                android:background="@drawable/gradient_box"
-                android:layout_margin="@dimen/m_p_5dp"
-                />
-        </LinearLayout>
-
-        <!--eula_btn_layout-->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="bottom"
-            >
-            <Button
-                android:id="@+id/eula_btn"
-                android:text="@string/eulabtn"
-                android:textSize="@dimen/text_14"
-                android:textColor="@color/white"
-                android:background="@drawable/border"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/m_p_5dp"
-                android:layout_alignParentBottom="true"
-                />
-        </RelativeLayout>
-    </LinearLayout>
-</ScrollView>
+</RelativeLayout>
