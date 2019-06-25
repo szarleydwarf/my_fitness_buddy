@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:gravity="center"
+    android:background="@color/white"
     >
 
-    <Button
-        android:id="@+id/sign_out_btn"
-        android:text="SignOut"
-        android:layout_centerInParent="true"
-        android:enabled="false"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/welcome_tv"
+        android:text="Signing in"
+        android:gravity="center"
+        android:textSize="@dimen/text_28"
+        android:textColor="@color/dark_navy"
         />
 
 </RelativeLayout>

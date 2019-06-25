@@ -29,7 +29,6 @@ public class SignIn extends Activity implements View.OnClickListener {
     private Utilities u;
     private static final int MY_REQUEST_CODE = 22;
     private List<AuthUI.IdpConfig> providers;
-    private Button signout;
     private boolean signedout;
 
     @Override
@@ -41,30 +40,25 @@ public class SignIn extends Activity implements View.OnClickListener {
     }
 
     private void init(){
-        signout = findViewById(R.id.sign_out_btn);
-        signout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AuthUI.getInstance().signOut(SignIn.this)
-                        .addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                signout.setEnabled(false);
-                                showSigningOptions();
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(SignIn.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                });
-            }
-        });
+        if (signedout) {
+            AuthUI.getInstance().signOut(SignIn.this)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            showSigningOptions();
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(SignIn.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
 
         providers = Arrays.asList(
+                new AuthUI.IdpConfig.EmailBuilder().build(),
                 new AuthUI.IdpConfig.GoogleBuilder().build(),
-                new AuthUI.IdpConfig.FacebookBuilder().build(),
-                new AuthUI.IdpConfig.EmailBuilder().build()
+                new AuthUI.IdpConfig.FacebookBuilder().build()
 
         );
 
@@ -74,7 +68,6 @@ public class SignIn extends Activity implements View.OnClickListener {
     private void showSigningOptions() {
         int requestCode;
         if(signedout) {
-            signout.setEnabled(true);
             requestCode = 0;
         } else {
             requestCode = MY_REQUEST_CODE;
@@ -96,7 +89,6 @@ public class SignIn extends Activity implements View.OnClickListener {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 signIn(user);
                 Toast.makeText(this, ""+user.getEmail(), Toast.LENGTH_SHORT).show();
-                signout.setEnabled(true);
             } else {
                 Toast.makeText(this, ""+response.getError().getMessage(), Toast.LENGTH_SHORT).show();
             }

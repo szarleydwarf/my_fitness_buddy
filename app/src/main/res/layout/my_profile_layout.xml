@@ -47,6 +47,7 @@
                 android:background="@drawable/hline"
                 android:layout_margin="@dimen/m_p_20dp"
                 />
+
             <!--user name editview-->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -56,7 +57,7 @@
                 android:layout_margin="@dimen/m_p_20dp"
                 >
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/user_nick"
                     android:text="@string/default_user_nick"
@@ -68,7 +69,6 @@
                     android:id="@+id/nick_name_edit"
                     android:text="@string/edit"
                     android:background="@drawable/border"
-                    android:layout_weight="1"
                 />
             </LinearLayout>
 
@@ -81,7 +81,7 @@
                 android:layout_margin="@dimen/m_p_20dp"
                 >
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/user_email"
                     android:text="@string/default_user_nick"
@@ -93,9 +93,9 @@
                     android:id="@+id/email_edit"
                     android:text="@string/edit"
                     android:background="@drawable/border"
-                    android:layout_weight="1"
                 />
             </LinearLayout>
+
             <!--password editview-->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -113,6 +113,7 @@
                     android:layout_weight="1"
                 />
             </LinearLayout>
+
             <!--LogOut button editview-->
             <LinearLayout
                 android:layout_width="match_parent"
