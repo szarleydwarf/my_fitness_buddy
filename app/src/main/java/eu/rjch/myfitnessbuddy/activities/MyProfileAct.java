@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -21,7 +22,7 @@ public class MyProfileAct extends Activity implements View.OnClickListener {
     private Uri url;
     private TextView userTV, emailTV;
     private ImageView iv;
-    private Button signout_btn;
+    private Button signout_btn, settings_btn, edit_btn, password_change_btn;
     private FirebaseAuth mAuth;
 
 
@@ -37,8 +38,7 @@ public class MyProfileAct extends Activity implements View.OnClickListener {
 
         mAuth = FirebaseAuth.getInstance();
 
-        signout_btn = findViewById(R.id.signout_btn);
-        signout_btn.setOnClickListener(this);
+        setButtnos();
 
         email = getIntent().getStringExtra("email");
         username = getIntent().getStringExtra("username");
@@ -56,8 +56,36 @@ public class MyProfileAct extends Activity implements View.OnClickListener {
 
         Picasso.get().load(url).into(iv);
     }
+
+    private void setButtnos() {
+        signout_btn = findViewById(R.id.signout_btn);
+        signout_btn.setOnClickListener(this);
+
+        settings_btn = findViewById(R.id.settings_btn);
+        settings_btn.setOnClickListener(this);
+
+        edit_btn = findViewById(R.id.edit_btn);
+        edit_btn.setOnClickListener(this);
+
+        password_change_btn = findViewById(R.id.password_edit_btn);
+        password_change_btn.setOnClickListener(this);
+    }
+
     public void onClick(View view) {
-        goBack();
+        switch (view.getId()) {
+            case R.id.signout_btn:
+                goBack();
+            break;
+            case R.id.settings_btn:
+                Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.edit_btn:
+                Toast.makeText(this, "EDIT", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.password_edit_btn:
+                Toast.makeText(this, "PASSWORD change", Toast.LENGTH_SHORT).show();
+                break;
+        }
     }
 
     public void onStart() {
