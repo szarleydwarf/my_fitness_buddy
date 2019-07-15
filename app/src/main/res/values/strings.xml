@@ -77,23 +77,27 @@
     <p>This EULA agreement, and any dispute arising out of or in connection with this EULA agreement, shall be governed by and construed in accordance with the laws of <b>Ireland</b>.</p>
 </string>
 
-	<string name="signing">Continue with Google</string>
-	<string name="signinf">Continue with Facebook</string>
-	<string name="eulabtn">End-User License Agreement (EULA) of <i>My Fitness Buddy</i></string>
-	<string name="back_btn">Back</string>
-	<string name="google">Google</string>
-	<string name="fb">Facebook</string>
-	<string name="or">OR</string>
-	<string name="edit">EDIT PROFILE</string>
-	<string name="enter_your_password">Enter your password</string>
-	<string name="enter_your_email">Enter your email</string>
-	<string name="default_user_nick">NoName</string>
+    <string name="signing">Continue with Google</string>
+    <string name="signinf">Continue with Facebook</string>
+    <string name="eulabtn">End-User License Agreement (EULA) of <i>My Fitness Buddy</i></string>
+    <string name="back_btn">Back</string>
+    <string name="google">Google</string>
+    <string name="fb">Facebook</string>
+    <string name="or">OR</string>
+    <string name="edit">EDIT PROFILE</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="default_user_nick">NoName</string>
 
     <string name="cancel">CANCEL</string>
     <string name="edit_password">Change Password</string>
-	<string name="signout">Sign Out</string>
-	<string name="default_location">Choose your location or allow location to be found.</string>
-	<string name="default_activities">Choose your activities from list.</string>
+    <string name="signout">Sign Out</string>
+    <string name="default_location">Choose your location or allow location to be found.</string>
+    <string name="default_activities">Choose your activities from list.</string>
     <string name="privacy_policy_btn">Privacy Policy</string>
+    <string name="save_btn">SAVE</string>
+    <string name="enter_location">Enter your location</string>
+    <string name="enter_nickname">Enter your name/nick</string>
+    <string name="choose_activities">Choose up to 5 activities</string>
 
 </resources>

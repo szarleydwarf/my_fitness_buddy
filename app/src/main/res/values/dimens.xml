@@ -13,4 +13,5 @@
     <dimen name="stroke_2dp">2dp</dimen>
     <dimen name="text_28">28sp</dimen>
     <dimen name="m_p_200dp">200dp</dimen>
+    <dimen name="m_p_10dp">10dp</dimen>
 </resources>
