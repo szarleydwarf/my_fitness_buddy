@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class DatabaseHelper extends SQLiteOpenHelper {
+public class SQLiteDBHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "fitness_buddy_db";
     private static final String TABLE_NAME = "user_table";
     private static final String COL1 = "ID";
@@ -14,7 +14,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COL5 = "fav_profiles";
 
 
-    public DatabaseHelper(Context context) {
+    public SQLiteDBHelper(Context context) {
         super(context, DB_NAME, null, 1);
     }
 
