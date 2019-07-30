@@ -87,7 +87,7 @@
     <string name="edit">EDIT PROFILE</string>
     <string name="enter_your_password">Enter your password</string>
     <string name="enter_your_email">Enter your email</string>
-    <string name="default_user_nick">NoName</string>
+    <string name="default_user_nick">No Name</string>
 
     <string name="cancel">CANCEL</string>
     <string name="edit_password">Change Password</string>
@@ -99,5 +99,11 @@
     <string name="enter_location">Enter your location</string>
     <string name="enter_nickname">Enter your name/nick</string>
     <string name="choose_activities">Choose up to 5 activities</string>
+
+    <string name="email">email</string>
+    <string name="username">username</string>
+    <string name="url">url</string>
+    <string name="location">location</string>
+    <string name="fav_activities">fav_activities</string>
 
 </resources>

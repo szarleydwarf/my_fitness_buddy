@@ -87,6 +87,7 @@ public class SignIn extends Activity implements View.OnClickListener {
             IdpResponse response = IdpResponse.fromResultIntent(data);
             if(resultCode == RESULT_OK){
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                //todo check if user exist in firebase database if not create user/else retrive data
                 signIn(user);
                 Toast.makeText(this, ""+user.getEmail(), Toast.LENGTH_SHORT).show();
             } else {
@@ -97,9 +98,10 @@ public class SignIn extends Activity implements View.OnClickListener {
 
     private void signIn(FirebaseUser user) {
         Intent i = new Intent(this, MyProfileAct.class);
-        i.putExtra("email", user.getEmail());
-        i.putExtra("username", user.getDisplayName());
-        i.putExtra("url", String.valueOf(user.getPhotoUrl()));
+        i.putExtra(getResources().getString(R.string.email), user.getEmail());
+        i.putExtra(getResources().getString(R.string.username), user.getDisplayName());
+        i.putExtra(getResources().getString(R.string.url), String.valueOf(user.getPhotoUrl()));
+
         startActivity(i);
         finish();
     }

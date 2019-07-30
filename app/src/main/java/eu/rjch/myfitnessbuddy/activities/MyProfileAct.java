@@ -40,9 +40,9 @@ public class MyProfileAct extends Activity implements View.OnClickListener {
 
         setButtnos();
 
-        email = getIntent().getStringExtra("email");
-        username = getIntent().getStringExtra("username");
-        photo = getIntent().getStringExtra("url");
+        email = getIntent().getStringExtra(getResources().getString(R.string.email));
+        username = getIntent().getStringExtra(getResources().getString(R.string.username));
+        photo = getIntent().getStringExtra(getResources().getString(R.string.url));
 
         u.showToast(this,"Hello " + username);
         url = Uri.parse(photo);
